@@ -19,7 +19,7 @@ class OnboardingController extends GetxController {
 
   void nextPage() {
     if (currentPageIndex.value == 2) {
-      Get.offAll(const Login());
+      Get.offAll(const LoginScreen());
     } else {
       int page = currentPageIndex.value + 1;
       pageController.jumpToPage(page);
