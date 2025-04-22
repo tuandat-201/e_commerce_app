@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:e_commerce_app/utils/constants/colors.dart';
 import 'package:e_commerce_app/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 

@@ -4,6 +4,7 @@ import 'package:e_commerce_app/common/styles/shadows.dart';
 import 'package:e_commerce_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:e_commerce_app/common/widgets/icons/t_circular_icon.dart';
 import 'package:e_commerce_app/common/widgets/images/t_rounded_image.dart';
+import 'package:e_commerce_app/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:e_commerce_app/common/widgets/texts/t_product_price_text.dart';
 import 'package:e_commerce_app/common/widgets/texts/t_product_title_text.dart';
 import 'package:e_commerce_app/utils/constants/colors.dart';
@@ -78,28 +79,18 @@ class TProductCardVertical extends StatelessWidget {
             const SizedBox(height: TSizes.spaceBtwItems / 2),
 
             //Detail
-            Padding(
-              padding: const EdgeInsets.all(TSizes.sm),
+            const Padding(
+              padding: EdgeInsets.all(TSizes.sm),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const TProductTitleText(
+                  TProductTitleText(
                     title: 'Green Nike Air Shoes',
                     smallText: true,
                   ),
-                  const SizedBox(height: TSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        style: Theme.of(context).textTheme.labelMedium,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      const SizedBox(width: TSizes.xs),
-                      const Icon(Iconsax.verify5,
-                          color: TColors.primary, size: TSizes.iconXs),
-                    ],
+                  SizedBox(height: TSizes.spaceBtwItems / 2),
+                  TBrandTitleTextWithVerifiedIcon(
+                    title: 'Nike',
                   ),
                 ],
               ),
