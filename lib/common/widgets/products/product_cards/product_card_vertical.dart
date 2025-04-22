@@ -33,6 +33,7 @@ class TProductCardVertical extends StatelessWidget {
           color: dark ? TColors.darkGrey : TColors.white,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             //Thumbnail,Wishlist Button,Discount Tag
             TRoundedContainer(
@@ -81,18 +82,21 @@ class TProductCardVertical extends StatelessWidget {
             //Detail
             const Padding(
               padding: EdgeInsets.all(TSizes.sm),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  TProductTitleText(
-                    title: 'Green Nike Air Shoes',
-                    smallText: true,
-                  ),
-                  SizedBox(height: TSizes.spaceBtwItems / 2),
-                  TBrandTitleTextWithVerifiedIcon(
-                    title: 'Nike',
-                  ),
-                ],
+              child: SizedBox(
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    TProductTitleText(
+                      title: 'Green Nike Air Shoes',
+                      smallText: true,
+                    ),
+                    SizedBox(height: TSizes.spaceBtwItems / 2),
+                    TBrandTitleTextWithVerifiedIcon(
+                      title: 'Nike',
+                    ),
+                  ],
+                ),
               ),
             ),
 
