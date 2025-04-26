@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../utils/constants/sizes.dart';
+
 class FavoriteScreen extends StatelessWidget {
   const FavoriteScreen({super.key});
 
@@ -21,13 +23,14 @@ class FavoriteScreen extends StatelessWidget {
               icon: const Icon(Iconsax.add)),
         ],
       ),
+
+      //Cần sửa lại
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            TGridLayout(
-                itemCount: 6,
-                itemBuilder: (context, index) => const TProductCardVertical()),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          child: TGridLayout(
+              itemCount: 6,
+              itemBuilder: (context, index) => const TProductCardVertical()),
         ),
       ),
     );
